@@ -8,19 +8,24 @@ spring:
     gateway:
       routes:
         - id: product-service
-          uri: http://localhost:8081
+          uri: lb://product-service
           predicates:
             - Path=/api/products/**
 
         - id: notification-service
-          uri: http://localhost:8083
+          uri: lb://notification-service
           predicates:
             - Path=/api/notifications/**
 
         - id: monitoring-service
-          uri: http://localhost:8082
+          uri: lb://monitoring-service
           predicates:
             - Path=/api/monitoring/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
 
 management:
   endpoints:
