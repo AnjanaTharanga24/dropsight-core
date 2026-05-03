@@ -18,10 +18,10 @@
     </parent>
 
     <modules>
+        <module>eureka-server</module>
         <module>product-service</module>
         <module>notification-service</module>
         <module>monitoring-service</module>
-        <module>api-gateway</module>
     </modules>
 
     <properties>
