@@ -9,6 +9,17 @@
     <artifactId>dropsight-core</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+    </dependencies>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -22,6 +33,7 @@
         <module>product-service</module>
         <module>notification-service</module>
         <module>monitoring-service</module>
+        <module>api-gateway</module>
     </modules>
 
     <properties>
